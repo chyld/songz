@@ -1,13 +1,134 @@
 /*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the top of the
- * compiled file, but it's generally better to create a new file per style scope.
- *
+ *= require 'reset'
  *= require_self
- *= require_tree .
  */
+
+@import url(http://fonts.googleapis.com/css?family=Share+Tech+Mono);
+
+body
+{
+  background: #D8DCCE url(../img/presentation/bg-400-paper.jpg) repeat 0 0;
+  color: #321E1E;
+  font-family: 'Share Tech Mono', sans-serif;
+  font-size: 13px;
+  line-height: 17px;
+}
+
+header
+{
+  font-size: 75px;
+  padding: 25px 0px 50px 10px;
+}
+
+nav
+{
+  background-color: #BE3C14;
+  color: #FFFFFF;
+  padding: 15px 0px 15px 10px;
+  margin-bottom: 25px;
+}
+
+h1
+{
+  margin-bottom: 10px;
+}
+
+a
+{
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+p
+{
+  padding: 0px 0px 10px 0px;
+}
+
+#songz
+{
+  padding: 10px;
+}
+
+footer
+{
+  padding: 10px;
+  font-size: 11px;
+  margin-top: 50px;
+}
+
+.clear
+{
+  clear: both;
+}
+
+.field > label
+{
+  display: block;
+}
+
+.field
+{
+  margin-bottom: 10px;
+}
+
+.field img
+{
+  width: 150px;
+  height: 150px;
+}
+
+.field .checkbox
+{
+  float: left;
+  border: 1px dashed #be3c14;
+  padding: 5px;
+  background-color: #FFFFFF;
+  margin: 0px 10px 10px 0px;
+}
+
+.errors
+{
+  color: #be3c14;
+  list-style-type: circle;
+  padding-left: 17px;
+}
+
+.pill
+{
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  border: 1px dashed #BE3C14;
+  float: left;
+  margin: 0px 20px 20px 0px;
+  width: 150px;
+}
+
+.pill img
+{
+  width: 150px;
+  height: 150px;
+}
+
+.pill .data
+{
+  height: 100px;
+  padding: 3px;
+  overflow: auto;
+}
+
+.pill .name
+{
+  font-style: italic;
+}
+
+.pill ul
+{
+  list-style-type: circle;
+  padding-left: 17px;
+}
+
+.pill a
+{
+  color: #BE3C14;
+}

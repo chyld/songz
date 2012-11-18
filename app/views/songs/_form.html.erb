@@ -1,0 +1,22 @@
+<%= render :partial => 'shared/errors', :locals => {:object => @song} %>
+<%= form_for @song, :html => {:multipart => true} do |f| %>
+  <div class='field'>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+  <div class='field'>
+    <%= f.label :local %>
+    <%= f.file_field :photo %>
+  </div>
+  <div class='field'>
+    <%= f.label :remote %>
+    <%= f.text_field :remote_photo_url %>
+  </div>
+  <div class='field'>
+    <%= f.hidden_field :photo_cache %>
+    <%= image_tag(@song.photo_url) if @song.photo? %>
+  </div>
+  <div class='field'>
+    <%= f.submit %>
+  </div>
+<% end %>

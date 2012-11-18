@@ -8,7 +8,24 @@
 </head>
 <body>
 
-<%= yield %>
+<header>songz.</header>
+<nav>
+  <%= link_to "Home", root_path %>
+  |
+  <%= link_to "Songs", songs_path %>
+  |
+  <%= link_to "Albums", albums_path %>
+  |
+  <%= link_to "Artists", artists_path %>
+  |
+  <%= link_to "new song", new_song_path %>
+  |
+  <%= link_to "new album", new_album_path %>
+  |
+  <%= link_to "new artist", new_artist_path %>
+</nav>
+<div id="songz"><%= yield %></div>
+<footer class='clear'>(c) 2012 Chyld Medford</footer>
 
 </body>
 </html>

@@ -1,0 +1,22 @@
+<div class='pill'>
+  <div class='photo'><%= link_to image_tag(song.photo_url), song %></div>
+  <div class='data'>
+    <div class='name'><%= link_to song.name, edit_song_path(song) %></div>
+    <div class='artists'>
+      Artists:
+      <ul>
+        <% song.artists.each do |artist| %>
+          <li><%= link_to artist.name, artist %></li>
+        <% end %>
+      </ul>
+    </div>
+    <div class='albums'>
+      Albums:
+      <ul>
+        <% song.albums.each do |album| %>
+          <li><%= link_to album.name, album %></li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</div>
