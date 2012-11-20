@@ -18,13 +18,22 @@
   |
   <%= link_to "Artists", artists_path %>
   |
+  <%= link_to "Genres", genres_path %>
+  |
   <%= link_to "new song", new_song_path %>
   |
   <%= link_to "new album", new_album_path %>
   |
   <%= link_to "new artist", new_artist_path %>
+  |
+  <%= link_to "new genre", new_genre_path %>
 </nav>
-<div id="songz"><%= yield %></div>
+
+<div id="songz">
+  <audio></audio>
+  <%= yield %>
+</div>
+
 <footer class='clear'>(c) 2012 Chyld Medford</footer>
 
 </body>

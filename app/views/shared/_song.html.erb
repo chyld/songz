@@ -1,6 +1,10 @@
 <div class='pill'>
   <div class='photo'><%= link_to image_tag(song.photo.thumb.url), song %></div>
   <div class='data'>
+    <div class='player'>
+      <%= image_tag('icons/control_play_blue.png', 'data-file' => "#{song.audiofile.url}") %>
+      <%= image_tag('icons/control_pause_blue.png') %>
+    </div>
     <div class='name'><%= link_to song.name, edit_song_path(song) %></div>
     <div class='artists'>
       Artists:
@@ -15,6 +19,14 @@
       <ul>
         <% song.albums.each do |album| %>
           <li><%= link_to album.name, album %></li>
+        <% end %>
+      </ul>
+    </div>
+    <div class='genres'>
+      Genres:
+      <ul>
+        <% song.genres.each do |genre| %>
+          <li><%= link_to genre.name, genre %></li>
         <% end %>
       </ul>
     </div>

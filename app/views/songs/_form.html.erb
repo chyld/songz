@@ -4,6 +4,7 @@
     <%= f.label :name %>
     <%= f.text_field :name %>
   </div>
+  <h1>Image</h1>
   <div class='field'>
     <%= f.label :local %>
     <%= f.file_field :photo %>
@@ -14,7 +15,24 @@
   </div>
   <div class='field'>
     <%= f.hidden_field :photo_cache %>
-    <%= image_tag(@song.photo_url) if @song.photo? %>
+    <%= image_tag(@song.photo.thumb.url) if @song.photo? %>
+  </div>
+  <h1>Music</h1>
+  <div class='field'>
+    <%= f.label :local %>
+    <%= f.file_field :audiofile %>
+  </div>
+  <div class='field'>
+    <%= f.label :remote %>
+    <%= f.text_field :remote_audiofile_url %>
+  </div>
+  <div class='field'>
+    <%= f.hidden_field :audiofile_cache %>
+    <%= audio_tag(@song.audiofile.url, :controls => :true) if @song.audiofile? %>
+  </div>
+  <div class='field'>
+    <%= f.label :youtube %>
+    <%= f.text_field :youtube %>
   </div>
   <div class='field'>
     <%= f.submit %>

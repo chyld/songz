@@ -1,0 +1,19 @@
+<%= render :partial => 'shared/errors', :locals => {:object => @genre} %>
+<%= form_for @genre do |f| %>
+  <div class='field'>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+  <div class='field'>
+    <%= f.label :songs %>
+    <% Song.all.each do |song| %>
+      <div class='checkbox'>
+        <%= f.label song.name %>
+        <%= check_box_tag 'genre[song_ids][]', song.id, song.in?(@genre.songs) %>
+      </div>
+    <% end %>
+  <div>
+  <div class='field clear'>
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -14,7 +14,7 @@
   </div>
   <div class='field'>
     <%= f.hidden_field :photo_cache %>
-    <%= image_tag(@artist.photo_url) if @artist.photo? %>
+    <%= image_tag(@artist.photo.thumb.url) if @artist.photo? %>
   </div>
   <div class='field'>
     <%= f.label :songs %>
